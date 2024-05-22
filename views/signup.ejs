@@ -1,0 +1,79 @@
+<!-- signup.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Pass a JavaScript variable to a partial in EJS -->
+  <%- include('partials/head.ejs', { title: "Signup" }) %>
+
+  <body>
+    <%- include('partials/navbar2') %>
+
+    <div class="content">
+      <div class="create">
+        <h2>Signup</h2>
+        <form action="/user/signup" method="POST">
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          />
+          <br />
+
+          <label for="password">Password:</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Enter your password"
+            required
+          />
+          <br />
+
+          <label for="firstName">First Name:</label>
+          <input
+            type="text"
+            id="firstName"
+            name="firstName"
+            placeholder="Enter your first name"
+          />
+          <br />
+
+          <label for="lastName">Last Name:</label>
+          <input
+            type="text"
+            id="lastName"
+            name="lastName"
+            placeholder="Enter your last name"
+          />
+          <br />
+
+          <label for="phoneNumber">Phone Number:</label>
+          <input
+            type="text"
+            id="phoneNumber"
+            name="phoneNumber"
+            placeholder="Enter your phone number"
+          />
+          <br />
+
+          <label for="age">Age:</label>
+          <input type="date" id="age" name="age" />
+          <br />
+
+          <label for="role">Role:</label>
+          <select id="role" name="role">
+            <option value="guest">Guest</option>
+            <option value="admin">Admin</option>
+          </select>
+          <br />
+
+          <button type="submit">Signup</button>
+        </form>
+      </div>
+    </div>
+
+    <%- include('partials/footer') %>
+  </body>
+</html>
